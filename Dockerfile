@@ -14,4 +14,4 @@ COPY --from=build /var/opt/node_modules/ node_modules/
 COPY lib lib/
 COPY --chown=node:node config.mjs index.mjs package.json README.md .
 USER node
-CMD ["pm2-runtime", "--raw", "--instances", "max", "--name", "app", "--no-autorestart", "start", "index.mjs"]
+CMD ["pm2-runtime", "--raw", "--instances", "1", "--name", "app", "--no-autorestart", "start", "index.mjs"]
