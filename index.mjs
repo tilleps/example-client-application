@@ -1,7 +1,7 @@
 import pino from "pino";
 import app from "./lib/app.mjs";
 
-const { PORT = 8888 } = process.env;
+const { PORT = 56000 } = process.env;
 
 const logger = pino();
 
