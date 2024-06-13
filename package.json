@@ -1,6 +1,6 @@
 {
   "name": "example-client-application",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Example client application",
   "main": "index.mjs",
   "scripts": {
