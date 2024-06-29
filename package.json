@@ -4,8 +4,8 @@
   "description": "Example client application",
   "main": "index.mjs",
   "scripts": {
-    "dev": "node --watch -r dotenv/config index.mjs",
-    "start": "NODE_ENV=production node -r dotenv/config index.mjs",
+    "dev": "GIT_COMMIT=$(git rev-parse --short HEAD) node --watch -r dotenv/config index.mjs",
+    "start": "NODE_ENV=production GIT_COMMIT=$(git rev-parse --short HEAD) node -r dotenv/config index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Eugene Song <tilleps@gmail.com>",

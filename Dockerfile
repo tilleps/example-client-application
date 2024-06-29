@@ -19,6 +19,11 @@ FROM build as test
 # STAGE: Runner
 #
 FROM build as runner
+
+# Allow the git commit to be passed in
+ARG GIT_COMMIT
+ENV GIT_COMMIT=$GIT_COMMIT
+
 WORKDIR /var/opt
 COPY --from=build /var/opt/node_modules/ node_modules/
 COPY lib lib/
